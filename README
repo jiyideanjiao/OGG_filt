@@ -16,7 +16,7 @@ sed -i 's/|lcl|/|/' outfile_1  (*.out) #将|lcl|整体删除
 4. 再次检查outfile_1文件内容，先创建新的文件夹1_cds，后进行文件裂解（split）
 
 mkdir 1_cds
-perl each-groups-CDS.pl outfile_1 1_cds #裂解outfile_1文件按照物种（species）排序成为多了单独的文件，保存至1_cds文件夹中
+perl each-group-CDS.pl outfile_1 1_cds #裂解outfile_1文件按照物种（species）排序成为多了单独的文件，保存至1_cds文件夹中
 
 5. 进入1_cds文件夹中，检查EOG开头文件内容，统计物种数目
 
