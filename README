@@ -1,4 +1,4 @@
-1. 将OGG主文件夹下的所有hamstrsearch_{species_initial, Mpha}_{famiyly, eg. hym}_out的文件复制到一个新的文件夹中，任意命名p
+1. 将OGG主文件夹下的所有hamstrsearch_{species_initial, Mpha}_{family, eg. hym}_out的文件复制到一个新的文件夹中，任意命名p
 cp {PATH}/hamstrsearch_* ./{your PATH}
 
 2. 检查out文件，每行均是以EOG开头，|1|或者一个或者多个|0|结尾。
