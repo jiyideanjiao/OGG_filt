@@ -21,11 +21,18 @@ perl each-group-CDS.pl outfile_1 1_cds #裂解outfile_1文件按照物种（spec
 5. 进入1_cds文件夹中，检查EOG开头文件内容，统计物种数目
 
 cd 1_cds
-grep ">" -c *.fas >> ./result_count.txt #将统计结果进行提取，并保存到result_count.txt文件中
+grep ">" -c *.fas >> ./count_ogg.txt #将统计结果进行提取，并保存到count_ogg.txt文件中
 
 6. 提取文件，进行后续的比对
 （需要过滤出包含序列数目和物种数目一致的EOG文件，进行后续比对）
 
+7. 运用filter_sample.py的python的脚本，后得到core_ogg_list的结果文件
+python filter_sample.py
 
+8. 创建core_ortholog的文件夹
+mkdir core_ortholog
+
+9. 运行以下命令
+cat result_core | awk '{print$1}' | xargs -I '{}' mv {} core_ogg_list/
 
 
