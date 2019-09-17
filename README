@@ -27,8 +27,7 @@
 （需要过滤出包含序列数目和物种数目一致的EOG文件，进行后续比对）
 
 7. 运用filter_sample.py的python的脚本，后得到core_ogg_list的结果文件
-  python filter_sample.py
-  (if int(count) > N): N需要调整
+  python filter_sample.py    #(if int(count) > N): N需要调整
 
 
 8. 创建core_ortholog的文件夹
