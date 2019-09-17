@@ -1,3 +1,3 @@
-# Select core (share) OGGs for phylogenetic tree construction.
+# Ant Phylogeny | Core (shared) OGGs
 
-split the OGGs from hamsearch_<species>.out file into tons of fasta files contained species
+Select core OGGs from hamsearch_<species>.out files
