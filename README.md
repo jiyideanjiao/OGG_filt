@@ -9,16 +9,16 @@ Select core OGGs from hamsearch_<species>.out files
 
 
 
-1. 将OGG主文件夹下的所有hamstrsearch_{species_initial, Mpha}_{family, eg. hym}_out的文件复制到一个新的文件夹中，任意命名
-cp {PATH}/hamstrsearch_* ./{your PATH}
+1 将OGG主文件夹下的所有hamstrsearch_{species_initial, Mpha}_{family, eg. hym}_out的文件复制到一个新的文件夹中，任意命名
+  cp {PATH}/hamstrsearch_* ./{your PATH}
 
-2. 检查out文件，每行均是以EOG开头，|1|或者一个或者多个|0|结尾。
-（此时需要将所有的out文件整合成一个outfile,后需要将重复的带有|0|的冗余行过滤，保留唯一解|1|）
+2 检查out文件，每行均是以EOG开头，|1|或者一个或者多个|0|结尾
+  (此时需要将所有的out文件整合成一个outfile,后需要将重复的带有|0|的冗余行过滤，保留唯一解|1|）
+  cat *.out > outfile #合并文件
+  cat outfile | grep -v "|0|" outfile > outfile_1 #利用grep -v "XX"命令对outfile文件中的序列进行有效的过滤，后提取出有效序列集，命名新的文件
+  outfile_1
 
-cat *.out > outfile #合并文件
-cat outfile | grep -v "|0|" outfile > outfile_1 #利用grep -v "XX"命令对outfile文件中的序列进行有效的过滤，后提取出有效序列集，命名新的文件名outfile_1
-
-3. 检查新的outfile_1文件，删除或者替换冗余的符号
+3 检查新的outfile_1文件，删除或者替换冗余的符号
 （由于有些基因组序列中带有|lcl|等多余内容，需要删除）
 
 sed -i 's/|lcl|/|/' outfile_1  (*.out) #将|lcl|整体删除
