@@ -1,3 +1,9 @@
-# Ant Phylogeny | Core (shared) OGGs
+# Phylogeny
 
-Select core OGGs from hamsearch_<species>.out files
+- Author: Chao Tong
+- Date: Jan-1-2020
+
+
+#### Gene Orthology
+
+extract OGG from hamsearch_<species>.out files
