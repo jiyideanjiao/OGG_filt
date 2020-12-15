@@ -44,7 +44,7 @@ grep ">" -c *.fas >> ./count_ogg.txt #将统计结果进行提取，并保存到
 - 需要过滤出包含序列数目和物种数目一致的EOG文件，进行后续比比对
 
 7.运用filter_sample.py的python的脚本，后得到core_ogg_list的结果文件
-`` 
+```
 python filter_sample.py
 ```
 
