@@ -31,14 +31,14 @@ sed -i 's/|lcl|/|/' outfile_1
 4. 再次检查outfile_1文件内容，先创建新的文件夹1_cds，后进行文件裂解（split）
 ```
 mkdir 1_cds
-perl each-group-CDS.pl outfile_1 1_cds #裂解outfile_1文件按照物种（species）排序成为多了单独的文件，保存至1_cds文件夹中
+perl each-group-CDS.pl outfile_1 1_cds
 ```
 
 5. 进入1_cds文件夹中，检查EOG开头文件内容，统计物种数目
 
 ```
 cd 1_cds
-grep ">" -c *.fas >> ./count_ogg.txt #将统计结果进行提取，并保存到count_ogg.txt文件中
+grep ">" -c *.fas >> ./count_ogg.txt
 ```
 6. 提取文件，进行后续的比对
 - 需要过滤出包含序列数目和物种数目一致的EOG文件，进行后续比比对
