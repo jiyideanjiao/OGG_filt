@@ -1,4 +1,4 @@
-# Phylogeny
+# Phylotranscriptomics
 
 - Author: Chao Tong
 - Date: Jan-1-2020
