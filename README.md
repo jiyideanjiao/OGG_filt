@@ -19,7 +19,7 @@ cp {PATH}/hamstrsearch_* ./{your PATH}
 
 ```
 cat *.out > outfile
-cat outfile | grep -v "|0|" outfile > outfile_1 #利用grep -v "XX"命令对outfile文件中的序列进行有效的过滤，后提取出有效序列集，命名新的文件名outfile_1
+cat outfile | grep -v "|0|" outfile > outfile_1
 ```
 
 3. 检查新的outfile_1文件，删除或者替换冗余的符号
